@@ -17,7 +17,14 @@ function App() {
   
   const addTodo=(title,dscr)=>{
     console.log("i am adding this todo",title,dscr)
-    let srno = todos[todos.length-1].srno +1
+    let srno ;
+    if(todos.length==0){
+      srno=0;
+    }
+    else{
+     srno = todos[todos.length-1].srno +1
+    }
+   
     const myTodo={
       srno:srno,
       title:title,
